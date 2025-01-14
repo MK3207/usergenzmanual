@@ -1,0 +1,595 @@
+<title>User "Gen Z" manual</title> 
+      <link rel="stylesheet" href="U.css">
+
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+/* Center the loader */
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+  width: 100px;
+  height: 100px;
+  margin: -76px 0 0 -76px;
+  border: 16px solid #FF0060;
+  border-radius: 100%;
+  border-right: :16px solid #F1F1F1;
+  border-bottom: 16px solid #F1F1F1;
+  border-left: 16px solid #F1F1F1;
+  border-top: 16px solid #F1F1F1;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Add animation to "page content" */
+.animate-bottom {
+  position: relative;
+  -webkit-animation-name: animatebottom;
+  -webkit-animation-duration: 1s;
+  animation-name: animatebottom;
+  animation-duration: 1s
+}
+
+@-webkit-keyframes animatebottom {
+  from { bottom:-100px; opacity:0 } 
+  to { bottom:0px; opacity:1 }
+}
+
+@keyframes animatebottom { 
+  from{ bottom:-100px; opacity:0 } 
+  to{ bottom:0; opacity:1 }
+}
+
+#myDiv {
+  display: none;
+  text-align: center;
+}
+</style>
+</head>
+<body onload="myFunction()" style="margin:0;">
+
+<div id="loader"></div>
+
+<div style="display:none;" id="myDiv" class="animate-bottom">
+
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+
+<html>
+<head>
+<style>
+img {
+  border: 5px solid #FF0060;
+}
+</style>
+</head>
+<body>
+
+<script>
+function highlightText() {
+  const input = document.getElementById("searchInput").value.toLowerCase();
+  const content = document.body.innerHTML;
+  const regex = new RegExp(input, "gi");
+
+  // Reset previous highlights
+  document.body.innerHTML = content.replace(
+    /<mark style="background-color: yellow;">(.*?)<\/mark>/gi,
+    "$1"
+  );
+
+  // Apply new highlights
+  if (input.trim()) {
+    document.body.innerHTML = content.replace(
+      regex,
+      (match) => <mark style="background-color: yellow;">${match}</mark>
+    );
+  }
+}
+</script>
+
+<style>
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: cell;
+  color: #FF0060;
+  text-decoration: underline;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #FFF4B7;
+  color: #FF0060;
+  text-align: center;
+  padding: 10px;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%; /* Position above the tooltip container */
+  left: 50%;
+  margin-left: -100px; /* Center the tooltip */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%; /* At the bottom of the tooltip */
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #FFF4B7 transparent transparent transparent;
+}
+
+/* Show the tooltip text on hover */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+</style>
+
+
+<p><h2 align="center"><a><img src="GZ.gif" class="center" width="900" height="350"></p>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Kanit;}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: inherit;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: cell;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  border: transparent;
+  border-top: none;
+}
+
+/* Style the close button */
+.topright {
+  float: right;
+  cursor: cell;
+  font-size: 18px;
+}
+
+.topright:hover {color: red;}
+</style>
+</head>
+<body>
+
+
+
+<div class="tab">
+  <button class="tablinks" onclick="openCity(event, 'Emoji')" id="defaultOpen">Emoji</button>
+  <button class="tablinks" onclick="openCity(event, 'Contractions')">Contractions</button>
+  <button class="tablinks" onclick="openCity(event, 'Rewards')">Rewards</button></a>
+</div>
+
+<div id="Emoji" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h5><span color="#FF0060">Emoji</span></a></h5>
+  <h5 align="center"><a>
+<p><a><span color="#FF0060"><span class="tooltip">Clown emoji<span class="tooltiptext"> Example: "You haven't watched Harry Potter? 🤡"</span> </span>
+</span></a> (🤡)</b>: Use it if you think that person behave/acts like a clown</li><p>
+
+	<p><a><span color="#FF0060"><span class="tooltip">Scull emoji<span class="tooltiptext"> Example: "Watch Harry Potter, bro 💀"</span> </span></span></a> (💀)</b>: Sarcastic way, but instead of cap (🧢), it more likely to use in a bad way</b></p>
+	<p><a><span color="#FF0060"><span class="tooltip">Cowboy emoji<span class="tooltiptext"> Example: "Sure thing Harry Potter is lit, bro 🤠"</span> </span></span></a>(🤠) (extra)</b>: I use this emoji to fill up emotional space</b></p>
+	<p><a><span color="#FF0060"><span class="tooltip">Big smile emoji<span class="tooltiptext"> Example: "I'm so proud I've watched Harry Potter 😁"</span> </span></span></a> (😁):Most common use for this emoji is similar to thumb up emoji (👍), but the difference is that this emoji shows not only approvement of smth but, also, positive way (thoughts/approvedness) of subject (subject which got this reaction/answer)</b></p>
+	<p><a><span color="#FF0060"><span class="tooltip">Saluting emoji<span class="tooltiptext">Example: "I will watch Harry Potter 🫡"</span></span></a> (🫡): Most common use for this emoji is to show your ability/willingness to do what you was asked to do</b></p><p>
+	<p><a><span color="#FF0060"><span class="tooltip">Bear (Freddy Fazbear) emoji <span class="tooltiptext"> Example: "Such a scary episode 🐻"</span> </span></span></a> (🐻): Although this emoji was popular in 2021 (when FNAF 9: security breach was released), sometimes i still see that someone use it as Freddy emoji (mostly under scary videos)</b></p>
+	<p><a><span color="#FF0060"><span class="tooltip">Moai emoji<span class="tooltiptext">Example: "Bruh 🗿"</span></span></span></a> (🗿): Also known as Bruh/Frown/No reaction/Predictable/OK emoji; most common to use when person says obvious things that everyone knows</b></p>
+	<p><a><span color="#FF0060"><span class="tooltip">Demon emoji<span class="tooltiptext">Example: "I'm done, that's it 👹"</span></span></span></a> (👹): Use to show Your extreme dissatisfaction about sbj</b></p>
+	<p><a><span color="#FF0060"><span class="tooltip">Don't talk emoji<span class="tooltiptext">Example: "Let's pretend nothing has happened 🙊"</span></span></span></a> (🙊): Use it in case if you don't want to talk about smth</b></p>
+	<p><a><span color="#FF0060"><span class="tooltip">Cover (OK) emoji<span class="tooltiptext">Example: "It's wasn't me 🙆"</span></span></span></a> (🙆): Use it in case if you don't know what to say about smth</b></p>
+	<p><a><span color="#FF0060"><span class="tooltip">"Ahh" emoji<span class="tooltiptext">Example: "What an ahh movie 🗣️"</span></span></span></a> (🗣️): Common use to show how smth going in unusual way</b></p>
+</h5></a>
+<h5 align="center"></h5>
+	</div>
+
+<div id="Contractions" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h5><span color="#FF0060">Contractions</span></a></h5>
+	<h5 align="center"><a></h5>
+  	<h5><p><a><span color="#FF0060"><span class="tooltip">OFC<span class="tooltiptext"> Example: "OFC Harry Potter is cool"</span></span></a>: Of course</h5>
+	<h5><p><a><span color="#FF0060">FR</span></a>: For real</li></p></h5>
+	<h5><p><a><span color="#FF0060">W</span></a>: To Win or to make good smth (W thought = Good thought)</li></p></h5>
+	<h5><p><a><span color="#FF0060">L</span></a>: Opposite of (W), To lose or to make bad smth (L thought = Bad thought)</li></p></h5>
+	<h5><p><a><span color="#FF0060">(I'm)Cooking</span></a>: To make smth good (Playing game f.e)</p></h5>
+	<h5><p><a><span color="#FF0060">Sold</span></a>: To lose (Lose a match in a game f.e)</p></h5>
+	<h5><p><a><span color="#FF0060">Sigma</span></a>: Person with enormous amount of charisma</p></h5>	
+	<h5><p><a><span color="#FF0060">Rizz</span></a>: To charm smb (by increasing sharpness of jaw line angle)</p></h5>
+	<h5><p><a><span color="#FF0060">Mewing</span></a>: Some people believe that it can increase their jew angle (make in sharepenss); There is emoji usage in this context (🧏), although this emoji shows deaf person talking on hand-language, most of users used to (or still do) use it as mewing emoji</p></h5>
+	<h5><p><a><span color="#FF0060">Lowkey</span></a>: Similar to "kinda" but notice that it uses to show that You wouldn't admit Your connection with subj</li></p></h5>
+	<h5><p><a><span color="#FF0060">Lock in</span></a>: To concentrate on the subject (I'm locking in = I'm concentrating)</p></h5>
+	<h5><p><a><span color="#FF0060">Cooked</span></a>: To lose, although there is word (Sold) with this meaning, cooked is more likely to use when smb won You</li></p> </h5>
+	<h5><p><a><span color="#FF0060">GOAT</span></a>: Greatest Of All Time; for people/games/places/events/etc</p></h5>
+	<h5><p><a><span color="#FF0060">Hits different</span></a>: Means that something is so awesome that it impacts you or inspires you on a whole new level</p></h5>
+	<h5><p><a><span color="#FF0060">High-key</span></a>: Opposite of low-key; used to express open excitement about something</p></h5>
+	<h5><p><a><span color="#FF0060">Bussin'</span></a>: Synonym to a word Amazing</p></h5>
+	<h5><p><a><span color="#FF0060">Drip</span></a>: Stylish clothes or appearance</p></h5>
+	<h5><p><a><span color="#FF0060">NGL</span></a>: Not gonna lie</p></h5>
+</a>
+</div>
+
+<div id="Rewards" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+  <h5><span color="#FF0060">Rewards</span></a></h5>
+	<h5 align="center"><a>
+<h5 align="center"><a><img src="L.png" class="center" width="900" height="450"></h5></a>
+<h5 align="center"><a><img src="J.png" class="center" width="900" height="450"></h5></a>
+<h5 align="center"><a><img src="N.png" class="center" width="900" height="450"></h5></a>
+<h5 align="center"><a><img src="H.png" class="center" width="900" height="450"></h5></a>
+<h5 align="center"><a><img src="RAT.png" class="center" width="900" height="450"></h5></a>
+<h5 align="center"><a><img src="FIN.png" class="center" width="900" height="450"></h5></a>
+</h5>
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Kanit;}
+
+.callout {
+  position: fixed;
+  bottom: 35px;
+  right: 20px;
+  margin-left: 20px;
+  max-width: 300px;
+}
+
+.callout-header {
+  padding: 25px 15px;
+  background: #555;
+  font-size: 18px;
+  color: #FFF4B7;
+}
+
+.callout-container {
+  padding: 15px;
+  background-color: #ccc;
+  color: #FF0060
+}
+
+.closebtn {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  color: #FF0060;
+  font-size: 28px;
+  cursor: cell;
+}
+
+.closebtn:hover {
+  color: #FFF4B7;
+}
+</style>
+</head>
+<body>
+
+<div class="callout">
+  <div class="callout-header">Give us a review!</div>
+  <span class="closebtn" onclick="this.parentElement.style.display='none';">×</span>
+  <div class="callout-container">
+    <span color="#FFF4B7"><p>Please, let us know Your opinion about User "Gen Z" manual.</span></p><p>You can complete Your review here:<p><span color="#FFF4B7"><a href="https://forms.gle/ZgnrXb19YTt1413N7">Type here to proceed to the google form</a></p></p><p> Close it if it is unnecessary.</p>
+  </div>
+</div>
+
+</body>
+</html>
+
+
+<div id="Images" class="tabcontent">
+  <span onclick="this.parentElement.style.display='none'" class="topright">&times</span>
+ <h3 align="center"><a><span color="#FF0060">Images</span></a></h3>
+  <p><h5 align="center"><a><img src="MP.png" class="center" width="900" height="450"></h5></a></p>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script> 
+
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  left: 30px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #FF0060;
+  color: #FFF4B7;
+  cursor: cell;
+  padding: 15px;
+  border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+<script>
+// Get the button
+let mybutton = document.getElementById("myBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+<style>
+
+/* Thick red border */
+hr.new4 {
+  border: 3px solid #FF0060;
+}
+
+</style>
+</head>
+<body>
+
+<hr class="new4">
+
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<body>
+</a></h2>
+	<a><span color="#FA7070">
+	<h5 align="center"><a>
+	<p>ALL RIGHTS RESERVED (B2+ GROUP®, MK®), CORYRIGHT (B2+ GROUP©, MK©), PUBLISHER (MK);</p>
+	<p>COPYING OR SHARING THIS MANUAL WITHOUT PERMISSION FROM B2+ GROUP OR MK IS PROHIBITED;</p>
+	<p>THIS VERSION IS UP TO DATE (LAST UPDATED 07.JAN.25) (V 2.0)</p></a>
+	</h5>
+
+<script>
+var myVar;
+
+function myFunction() {
+  myVar = setTimeout(showPage, 3000);
+}
+
+function showPage() {
+  document.getElementById("loader").style.display = "none";
+  document.getElementById("myDiv").style.display = "block";
+}
+</script>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confetti Effect</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Kanit;
+      background: #f3f4f6;
+    }
+
+    /* Full-screen canvas for confetti */
+    #confettiCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* Allow interactions with underlying content */
+    }
+
+    /* Example content to make the page scrollable */
+    .content {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content h1 {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .content p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- Example scrollable content -->
+  <div class="content">
+      </div>
+
+  <script>
+    const canvas = document.getElementById('confettiCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const confettiPieces = [];
+    const colors = ['#ff0a54', '#ff477e', '#ff7096', '#ff85a1', '#ffa3b1'];
+
+    class Confetti {
+      constructor(x, y, size, speedX, speedY, color, rotation) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.speedX = speedX;
+        this.speedY = speedY;
+        this.color = color;
+        this.rotation = rotation;
+        this.rotationSpeed = Math.random() * 0.1 - 0.05;
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.rotation += this.rotationSpeed;
+
+        // Reset confetti when it falls off screen
+        if (this.y > canvas.height) {
+          this.y = -this.size;
+          this.x = Math.random() * canvas.width;
+        }
+      }
+
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+        ctx.fillStyle = this.color;
+        ctx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
+        ctx.restore();
+      }
+    }
+
+    function createConfetti() {
+      for (let i = 0; i < 150; i++) {
+        const size = Math.random() * 10 + 5;
+        const speedX = Math.random() * 2 - 1;
+        const speedY = Math.random() * 3 + 1;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const rotation = Math.random() * 2 * Math.PI;
+
+        const confetti = new Confetti(
+          Math.random() * canvas.width,
+          Math.random() * canvas.height,
+          size,
+          speedX,
+          speedY,
+          color,
+          rotation
+        );
+
+        confettiPieces.push(confetti);
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      confettiPieces.forEach((confetti) => {
+        confetti.update();
+        confetti.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    createConfetti();
+    animate();
+
+    // Adjust canvas size on window resize
+    window.addEventListener('resize', () => {
+      canvas.
+width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+</body>
+</html>
