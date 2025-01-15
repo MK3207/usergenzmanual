@@ -4,6 +4,7 @@ body {
 	a {color: #FF0060}
 	a:visited 
   	color:#FB773C;
+	background-colour: #191A1C;
 }
 p {
   font-family: Kanit;
@@ -13,7 +14,7 @@ a.one:visited {color:#FB773C;}
 a.one:hover {color:#FFF4B7;}
 
 body {
- background-image: url('WPP.png');
+ 	background-colour: #191A1C;
 	background-repeat: repeat-x;
 	background-repeat: repeat-;
 	background-attachment: fixed;
