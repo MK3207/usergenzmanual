@@ -4,7 +4,8 @@ body {
 	a {color: #FF0060}
 	a:visited 
   	color:#FB773C;
-	background-colour: #191A1C;
+	background-color: #191A1C;
+	margin: 0;
 }
 p {
   font-family: Kanit;
@@ -14,7 +15,7 @@ a.one:visited {color:#FB773C;}
 a.one:hover {color:#FFF4B7;}
 
 body {
- 	background-colour: #191A1C;
+ 	background-color: #191A1C;
 	background-repeat: repeat-x;
 	background-repeat: repeat-;
 	background-attachment: fixed;
