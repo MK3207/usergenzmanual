@@ -12,94 +12,94 @@
   <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap" rel="stylesheet">
   <style>
   
-    #loading-screen {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      width: 100%;
-      height: 100vh;
-      background-color: #191A1C;
-      color: #FFF4B7;
-      position: absolute; /* Вместо fixed */
-      top: 0;
-      left: 0;
-      z-index: 10;
-      transition: opacity 0.5s ease, visibility 0.5s ease; /* Плавное исчезновение */
-    }
-    #loading-screen.hidden {
-      opacity: 0;
-      visibility: hidden; /* Скрываем экран после загрузки */
-    }
-    h1 {
-      font-size: 2em;
-      text-align: center;
-    }
-    .progress-bar-container {
-      width: 80%;
-      height: 20px;
-      background-color: #3e3e50;
-      border-radius: 10px;
-      
-      margin-top: 20px;
-    }
-    .progress-bar {
-      height: 100%;
-      width: 0;
-      background: linear-gradient(90deg, #fff4b7, #ff0060);
-      animation: loadProgress 5s linear forwards;
-    }
-    @keyframes loadProgress {
-      from { width: 0%; }
-      to { width: 100%; }
-    }
-    main {
-      display: none;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      text-align: center;
-    }
-    main.visible {
-      display: flex; /* Показываем контент после загрузки */
-    }
-    .button {
-      border-radius: 4px;
-      background-color: transparent;
-      border: solid 2px #FF0060;
-      color: #FFF4B7;
-      text-align: center;
-      font-size: 18px;
-      padding: 10px 20px;
-      transition: all 0.3s;
-      cursor: cell;
-    }
-    .button:hover {
-      background-color: #FF0060;
-      color: #191A1C;
-    }
-  </style>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Прочитайте правила</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .rules-section, .content-section {
+            padding: 20px;
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .rules-section {
+            background: #f9f9f9;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .rules-section h2 {
+            margin-top: 0;
+        }
+        .content-section {
+            display: none; /* Скрыто по умолчанию */
+            background: #fff;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            padding: 20px;
+        }
+        .content-section h2 {
+            margin-top: 0;
+        }
+        button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-  <!-- Загрузка -->
-  <div id="loading-screen">
-    <h1>Welcome to the User "Gen Z" manual V 3.0 (Reborn)!</h1>
-    <div class="progress-bar-container">
-      <div class="progress-bar"></div>
+    <header>
+        <h1>Добро пожаловать на наш сайт!</h1>
+    </header>
+
+    <!-- Раздел с правилами -->
+    <div class="rules-section">
+        <h2>Прочитайте правила</h2>
+        <p>
+            Перед использованием сайта, пожалуйста, ознакомьтесь с нашими правилами:
+        </p>
+        <ul>
+            <li>Не публикуйте запрещенный контент.</li>
+            <li>Соблюдайте законы и нормы приличия.</li>
+            <li>Используйте сайт в рамках его назначения.</li>
+        </ul>
+        <div>
+            <input type="checkbox" id="agree-checkbox">
+            <label for="agree-checkbox">Я прочитал(а) и согласен(а) с правилами</label>
+        </div>
+        <button id="show-content-btn" disabled>Продолжить</button>
     </div>
-  </div>
-  <!-- Основной контент -->
-    <script>
-    // Убираем экран загрузки и показываем контент
-    setTimeout(() => {
-      const loadingScreen = document.getElementById('loading-screen');
-      const mainContent = document.querySelector('main');
-      loadingScreen.classList.add('hidden'); // Добавляем класс для плавного скрытия
-      mainContent.classList.add('visible'); // Показываем контент
-    }, 3000); // 3 секунды
-  </script>
-</body>
-</html>
+
+    <!-- Основное содержимое -->
+    <div class="content-section" id="content-section">
 	</head>
 	<head>
 	<title> User manual </title>
@@ -432,5 +432,25 @@ width = window.innerWidth;
       canvas.height = window.innerHeight;
     });
   </script>
+	 </div>
+
+    <script>
+        const agreeCheckbox = document.getElementById('agree-checkbox');
+        const showContentBtn = document.getElementById('show-content-btn');
+        const contentSection = document.getElementById('content-section');
+
+        // Активируем кнопку, если галочка установлена
+        agreeCheckbox.addEventListener('change', function() {
+            showContentBtn.disabled = !this.checked;
+        });
+
+        // Показываем контент при нажатии на кнопку
+        showContentBtn.addEventListener('click', function() {
+            contentSection.style.display = 'block'; // Показываем основной контент
+            document.querySelector('.rules-section').style.display = 'none'; // Скрываем раздел с правилами
+        });
+    </script>
+</body>
+</html>
 </body>
 </html>
