@@ -1,7 +1,7 @@
 body {
-	color: #FFF4B7;
-	background: #191A1C;
-	a {color: #FF0060}
+	color: #346751;
+	background: #F7DBF0;
+	a {color: #C84B31}
 	a:visited 
   	color:#FB773C;
 	background-color: #191A1C;
@@ -15,7 +15,7 @@ a.one:visited {color:#FB773C;}
 a.one:hover {color:#FFF4B7;}
 
 body {
- 	background-color: #191A1C;
+ 	background-color: #F7DBF0;
 	background-repeat: repeat-x;
 	background-repeat: repeat-;
 	background-attachment: fixed;
