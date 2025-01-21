@@ -384,8 +384,138 @@ function showPage() {
   document.getElementById("myDiv").style.display = "block";
 }
 </script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confetti Effect</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Kanit;
+      background: #F7DBF0;
+    }
 
+    /* Full-screen canvas for confetti */
+    #confettiCanvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none; /* Allow interactions with underlying content */
+    }
 
+    /* Example content to make the page scrollable */
+    .content {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content h1 {
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    .content p {
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <canvas id="confettiCanvas"></canvas>
+
+  <!-- Example scrollable content -->
+  <div class="content">
+      </div>
+
+  <script>
+    const canvas = document.getElementById('confettiCanvas');
+    const ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    const confettiPieces = [];
+    const colors = ['#346751', '#F7DBF0', '#C84B31', '#FB773C', '#F1F1F1'];
+
+    class Confetti {
+      constructor(x, y, size, speedX, speedY, color, rotation) {
+        this.x = x;
+        this.y = y;
+        this.size = size;
+        this.speedX = speedX;
+        this.speedY = speedY;
+        this.color = color;
+        this.rotation = rotation;
+        this.rotationSpeed = Math.random() * 0.1 - 0.05;
+      }
+
+      update() {
+        this.x += this.speedX;
+        this.y += this.speedY;
+        this.rotation += this.rotationSpeed;
+
+        // Reset confetti when it falls off screen
+        if (this.y > canvas.height) {
+          this.y = -this.size;
+          this.x = Math.random() * canvas.width;
+        }
+      }
+
+      draw() {
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.rotation);
+        ctx.fillStyle = this.color;
+        ctx.fillRect(-this.size / 2, -this.size / 2, this.size, this.size);
+        ctx.restore();
+      }
+    }
+
+    function createConfetti() {
+      for (let i = 0; i < 150; i++) {
+        const size = Math.random() * 10 + 5;
+        const speedX = Math.random() * 2 - 1;
+        const speedY = Math.random() * 3 + 1;
+        const color = colors[Math.floor(Math.random() * colors.length)];
+        const rotation = Math.random() * 2 * Math.PI;
+
+        const confetti = new Confetti(
+          Math.random() * canvas.width,
+          Math.random() * canvas.height,
+          size,
+          speedX,
+          speedY,
+          color,
+          rotation
+        );
+
+        confettiPieces.push(confetti);
+      }
+    }
+
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      confettiPieces.forEach((confetti) => {
+        confetti.update();
+        confetti.draw();
+      });
+      requestAnimationFrame(animate);
+    }
+
+    createConfetti();
+    animate();
+
+    // Adjust canvas size on window resize
+    window.addEventListener('resize', () => {
+      canvas.
+width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    });
+  </script>
+	 </div>
   </script>
 </body>
 </html>
